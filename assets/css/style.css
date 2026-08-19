@@ -160,7 +160,7 @@ nav.scrolled { box-shadow: var(--shadow); }
 /* STATS */
 .stats-section { background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%); padding: 64px 0; }
 .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
-.stat-number { font-family: var(--font-h); font-size: 2rem; font-weight: 800; color: #fff; line-height: 1; margin-bottom: 8px; }
+.stat-number { font-family: var(--font-h); font-size: 2.4rem; font-weight: 900; color: #fff; line-height: 1; margin-bottom: 8px; }
 .stat-label { font-size: 14px; color: rgba(255,255,255,0.75); font-family: var(--font-h); font-weight: 500; }
 
 /* REVIEWS */

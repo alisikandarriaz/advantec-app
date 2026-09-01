@@ -157,19 +157,30 @@ document.addEventListener('DOMContentLoaded', () => {
   setupReveal();
 
   /* Forms */
-  document.querySelectorAll('form[data-form]').forEach(form => {
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      const btn = form.querySelector('button[type="submit"]');
-      btn.textContent = 'Sending...'; btn.disabled = true;
-      setTimeout(() => {
+ document.querySelectorAll('form[data-form]').forEach(form => {
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending...'; btn.disabled = true;
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
         form.reset();
-        btn.textContent = 'Send Message'; btn.disabled = false;
         const s = form.querySelector('.form-success');
         if (s) s.style.display = 'block';
-      }, 1200);
-    });
+      } else {
+        alert('Something went wrong. Please try emailing us directly at info@advantec.app');
+      }
+    } catch (err) {
+      alert('Something went wrong. Please try emailing us directly at info@advantec.app');
+    }
+    btn.textContent = 'Send Message'; btn.disabled = false;
   });
+});
 
   /* Cookie */
   const banner = document.getElementById('cookie-banner');

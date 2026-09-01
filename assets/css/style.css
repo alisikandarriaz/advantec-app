@@ -270,6 +270,9 @@ footer { background: var(--gray-900); color: #fff; padding: 52px 0 0; }
 /* RESPONSIVE */
 @media (max-width: 1000px) {
   .container { padding: 0 24px; }
+  .nav-links { display: none; }
+  .nav-wrap > div:last-child .btn { display: none; }
+  .hamburger { display: flex; }
   .hero-inner { grid-template-columns: 1fr; gap: 0; }
   .hero-visual { display: none; }
   .about-row { grid-template-columns: 1fr; gap: 40px; }
@@ -291,9 +294,7 @@ footer { background: var(--gray-900); color: #fff; padding: 52px 0 0; }
   .reviews-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .section { padding: 64px 0; }
-  @media (max-width: 600px) {
   form[data-form="home-inquiry"] > div:first-child {
     grid-template-columns: 1fr;
   }
-}
 }

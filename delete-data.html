@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Delete Your Data — AdvanTec</title>
-  <meta name="description" content="Request deletion of your account or data from AdvanTec apps." />
+  <meta name="description" content="Learn how to delete your account and data from AdvanTec apps." />
   <link rel="canonical" href="https://advantec.app/delete-data.html" />
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
   <meta name="theme-color" content="#679267" />
@@ -17,101 +17,106 @@
     <div class="nav-wrap">
       <a href="/" class="logo"><div class="logo-mark">AT</div></a>
       <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
-        <li><a href="terms.html">Terms</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#apps">Apps</a></li>
+        <li><a href="/#reviews">Reviews</a></li>
+        <li><a href="/#contact">Contact</a></li>
       </ul>
       <div style="display:flex;align-items:center;gap:12px;">
+        <a href="https://play.google.com/store/apps/dev?id=AdvanTec" target="_blank" rel="noopener" class="btn btn-green btn-sm nav-download">Download App</a>
         <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
       </div>
     </div>
   </div>
 </nav>
 <div class="mobile-menu" id="mobile-menu">
-  <a href="/">Home</a>
-  <a href="privacy.html">Privacy</a>
-  <a href="terms.html">Terms</a>
+  <a href="/#about">About</a>
+  <a href="/#apps">Apps</a>
+  <a href="/#reviews">Reviews</a>
+  <a href="/#contact">Contact</a>
+  <a href="https://play.google.com/store/apps/dev?id=AdvanTec" target="_blank" rel="noopener" class="btn btn-green btn-sm" style="margin-top:8px;text-align:center;">Download App</a>
 </div>
 
-<section class="page-hero">
-  <div class="container">
-    <span class="section-tag fade-up">Data Deletion</span>
-    <h1 class="fade-up d1">Delete Your Data</h1>
-    <p class="fade-up d2">Request deletion of your account or data from any AdvanTec app.</p>
+<div class="legal">
+  <span class="section-tag">Data Deletion</span>
+  <h1 style="margin-top:10px;">How to Delete Your Data</h1>
+  <span class="meta">AdvanTec · Last updated: September 2026</span>
+
+  <div class="key-points reveal">
+    <h3>Key Points</h3>
+    <ul>
+      <li>You can delete your account directly from the app's Settings screen</li>
+      <li>Account deletion is permanent and cannot be undone</li>
+      <li>All your data will be permanently removed within 30 days</li>
+      <li>If you can't access the app, you can request deletion by email below</li>
+    </ul>
   </div>
-</section>
 
-<section class="section">
-  <div class="container">
-    <div class="delete-section">
-      <div class="contact-grid" style="grid-template-columns:1fr;">
+  <h2>1. How to Delete Your Account from the App</h2>
+  <p>The fastest way to delete your account and all associated data is directly through the app:</p>
+  <ol>
+    <li>Open the app and go to <strong>Settings</strong></li>
+    <li>Scroll down and tap <strong>Account</strong></li>
+    <li>Tap <strong>Delete Account</strong></li>
+    <li>Confirm when prompted</li>
+  </ol>
+  <p>Your account and all data will be queued for permanent deletion. This process is irreversible.</p>
 
-        <div class="form-box reveal rd1" style="margin-bottom:32px;">
-          <div class="form-box-title">Delete Your Account</div>
-          <div class="form-box-sub">This will permanently delete your account and all associated data from our systems. This action cannot be undone.</div>
-          <form data-form="delete-account" action="https://formspree.io/f/xbgjgobg" method="POST" novalidate>
-            <input type="hidden" name="topic" value="Delete Account Request" />
-            <div class="form-group">
-              <label class="form-label">Email Address (used in the app) *</label>
-              <input class="form-control" type="email" name="email" placeholder="The email you registered with" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label">App Name *</label>
-              <select class="form-control" name="app">
-                <option>FocusAI</option>
-                <option>TimeDot</option>
-                <option>Digestive Health</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Reason (optional)</label>
-              <textarea class="form-control" name="message" placeholder="Why are you deleting your account?" style="min-height:80px;"></textarea>
-            </div>
-            <button type="submit" class="btn btn-green" style="width:100%;justify-content:center;padding:13px;">Request Account Deletion</button>
-            <div class="form-success">Your deletion request has been received. We will process it within 30 days as required by GDPR.</div>
-          </form>
+  <h2>2. What Happens to Your Data</h2>
+  <p>Once you delete your account, the following happens:</p>
+  <ul>
+    <li>Your profile information is removed immediately</li>
+    <li>All personal data, preferences, and app content are permanently deleted within 30 days</li>
+    <li>Any active subscriptions will be cancelled — though you should also cancel via Google Play to avoid further charges</li>
+    <li>We retain no backup of your data after the 30-day processing period</li>
+  </ul>
+
+  <h2>3. Can't Access the App?</h2>
+  <p>If you are unable to access the app or your account, you can request data deletion using the form below. We will process your request within 30 days as required by GDPR.</p>
+
+  <div class="contact-grid" style="grid-template-columns:1fr;max-width:600px;margin:32px auto 0;">
+    <div class="form-box reveal">
+      <form data-form="delete" action="https://formspree.io/f/xbgjgobg" method="POST" novalidate>
+        <div class="form-group">
+          <label class="form-label">Request Type *</label>
+          <select class="form-control" name="topic" required>
+            <option value="">Select a request type...</option>
+            <option value="Delete Account Request">Delete My Account</option>
+            <option value="Delete Specific Data Request">Delete Specific Data</option>
+          </select>
         </div>
-
-        <div class="form-box reveal rd2">
-          <div class="form-box-title">Delete Specific Data</div>
-          <div class="form-box-sub">Request deletion of specific data while keeping your account active.</div>
-          <form data-form="delete-data" action="https://formspree.io/f/xbgjgobg" method="POST" novalidate>
-            <input type="hidden" name="topic" value="Delete Specific Data Request" />
-            <div class="form-group">
-              <label class="form-label">Email Address (used in the app) *</label>
-              <input class="form-control" type="email" name="email" placeholder="The email you registered with" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label">App Name *</label>
-              <select class="form-control" name="app">
-                <option>FocusAI</option>
-                <option>TimeDot</option>
-                <option>Digestive Health</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">What data do you want deleted? *</label>
-              <textarea class="form-control" name="message" placeholder="Describe the specific data you want removed..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-green" style="width:100%;justify-content:center;padding:13px;">Request Data Deletion</button>
-            <div class="form-success">Your deletion request has been received. We will process it within 30 days as required by GDPR.</div>
-          </form>
+        <div class="form-group">
+          <label class="form-label">Email Address (used in the app) *</label>
+          <input class="form-control" type="email" name="email" placeholder="The email you registered with" required />
         </div>
-
-      </div>
-      <p style="text-align:center;margin-top:32px;font-size:14px;color:var(--muted);">
-        For any questions about data deletion, email us at <a href="mailto:info@advantec.app" style="color:var(--green-dark);font-weight:600;">info@advantec.app</a>
-      </p>
+        <div class="form-group">
+          <label class="form-label">App Name *</label>
+          <select class="form-control" name="app" required>
+            <option value="">Select an app...</option>
+            <option>FocusAI</option>
+            <option>TimeDot</option>
+            <option>Digestive Health</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Additional Details (optional)</label>
+          <textarea class="form-control" name="message" placeholder="Any additional information..." style="min-height:80px;"></textarea>
+        </div>
+        <button type="submit" class="btn btn-green" style="width:100%;justify-content:center;padding:13px;">Submit Request</button>
+        <div class="form-success">Your deletion request has been received. We will process it within 30 days as required by GDPR.</div>
+      </form>
     </div>
   </div>
-</section>
+
+  <h2>4. Contact Us</h2>
+  <p>If you have any questions about data deletion or your privacy rights, email us at <a href="mailto:info@advantec.app">info@advantec.app</a>. We are happy to help.</p>
+</div>
 
 <footer>
   <div class="container">
-    <div class="footer-bottom" style="border-top:none;">
-      <p>&copy; 2026 AdvanTec. All rights reserved.</p>
+    <div class="footer-bottom" style="border-top:1px solid rgba(255,255,255,.08);">
+      <p style="font-size:13px;color:var(--gray-500);">&copy; 2026 AdvanTec. All rights reserved.</p>
       <div class="footer-links">
         <a href="/">Home</a>
         <a href="privacy.html">Privacy</a>

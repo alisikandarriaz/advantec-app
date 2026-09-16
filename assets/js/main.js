@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   setupReveal();
+  setupScrollSpy();
 
   document.querySelectorAll('form[data-form]').forEach(form => {
     form.addEventListener('submit', async e => {
@@ -76,4 +77,25 @@ function setupReveal() {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll(targets).forEach(el => obs.observe(el));
+}
+
+function setupScrollSpy() {
+  const sections = document.querySelectorAll('section[id]');
+  if (!sections.length) return;
+  const navLinks = document.querySelectorAll('.nav-links a, .mobile-menu a');
+  if (!navLinks.length) return;
+
+  const update = () => {
+    let current = '';
+    const offset = 120;
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - offset) current = s.id;
+    });
+    navLinks.forEach(a => {
+      const href = a.getAttribute('href');
+      a.classList.toggle('active', href === '#' + current || href === '/#' + current);
+    });
+  };
+  window.addEventListener('scroll', update, { passive: true });
+  update();
 }

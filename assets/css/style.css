@@ -66,6 +66,14 @@ p  { color: var(--muted); line-height: 1.85; }
 .btn-ghost-white:hover { background: rgba(255,255,255,.22); border-color: rgba(255,255,255,.5); }
 .btn-white { background: #fff; color: var(--text); border-color: #fff; }
 .btn-white:hover { background: var(--gray-50); transform: translateY(-1px); }
+.btn-sm { padding: 8px 18px; font-size: 13px; }
+.nav-download { white-space: nowrap; }
+
+/* KEY POINTS (delete-data page) */
+.key-points { background: var(--green-50); border: 1px solid var(--green-100); border-radius: var(--r); padding: 24px 28px; margin: 28px 0 12px; }
+.key-points h3 { color: var(--green-dark); margin-bottom: 12px; }
+.key-points ul { padding-left: 20px; list-style: disc; }
+.key-points li { color: var(--text-2); line-height: 1.8; font-size: 15px; }
 
 /* SECTION TAG */
 .section-tag {
@@ -256,6 +264,7 @@ footer { background: var(--gray-900); color: #fff; padding: 52px 0 0; }
   .container { padding: 0 24px; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
+  .nav-download { display: none; }
   .about-row { grid-template-columns: 1fr; gap: 40px; }
   .portfolio-grid { grid-template-columns: 1fr 1fr; }
   .reviews-grid { grid-template-columns: 1fr 1fr; }

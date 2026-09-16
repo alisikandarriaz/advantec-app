@@ -31,6 +31,7 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div style="display:flex;align-items:center;gap:12px;">
+        <a href="https://play.google.com/store/apps/dev?id=AdvanTec" target="_blank" rel="noopener" class="btn btn-green btn-sm nav-download">Download App</a>
         <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
       </div>
     </div>
@@ -42,6 +43,7 @@
   <a href="#apps">Apps</a>
   <a href="#reviews">Reviews</a>
   <a href="#contact">Contact</a>
+  <a href="https://play.google.com/store/apps/dev?id=AdvanTec" target="_blank" rel="noopener" class="btn btn-green btn-sm" style="margin-top:8px;text-align:center;">Download App</a>
 </div>
 
 <!-- HERO -->
@@ -201,34 +203,19 @@
       <span class="section-tag">Get in Touch</span>
       <h2>How Can We Help?</h2>
     </div>
-    <div class="contact-grid">
+    <div class="contact-grid" style="grid-template-columns:1fr;max-width:600px;margin:0 auto;">
       <div class="form-box reveal rd1">
-        <div class="form-box-title">Hire Us to Develop Your App</div>
-        <div class="form-box-sub">Have an app idea? Tell us about it and we'll get back to you.</div>
-        <form data-form="hire" action="https://formspree.io/f/xbgjgobg" method="POST" novalidate>
-          <input type="hidden" name="topic" value="Hire Us - App Development" />
+        <form data-form="contact" action="https://formspree.io/f/xbgjgobg" method="POST" novalidate>
           <div class="form-group">
-            <label class="form-label">Full Name *</label>
-            <input class="form-control" type="text" name="name" placeholder="Your name" required />
+            <label class="form-label">Subject *</label>
+            <select class="form-control" name="topic" required>
+              <option value="">Select a subject...</option>
+              <option value="Hire Us - App Development">Hire Us to Develop Your App</option>
+              <option value="App Support / Query">Contact Us Regarding Our App</option>
+              <option value="Bug Report">Report a Bug</option>
+              <option value="General Inquiry">General Inquiry</option>
+            </select>
           </div>
-          <div class="form-group">
-            <label class="form-label">Email Address *</label>
-            <input class="form-control" type="email" name="email" placeholder="you@example.com" required />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Tell us about your project *</label>
-            <textarea class="form-control" name="message" placeholder="Describe your app idea, timeline, and budget..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-green" style="width:100%;justify-content:center;padding:13px;">Send Message</button>
-          <div class="form-success">Message sent! We will reply within 1 business day.</div>
-        </form>
-      </div>
-
-      <div class="form-box reveal rd2">
-        <div class="form-box-title">Contact Us Regarding Our App</div>
-        <div class="form-box-sub">Questions, support, bug reports, or feedback about our apps.</div>
-        <form data-form="support" action="https://formspree.io/f/xbgjgobg" method="POST" novalidate>
-          <input type="hidden" name="topic" value="App Support / Query" />
           <div class="form-group">
             <label class="form-label">Full Name *</label>
             <input class="form-control" type="text" name="name" placeholder="Your name" required />
@@ -239,7 +226,7 @@
           </div>
           <div class="form-group">
             <label class="form-label">Message *</label>
-            <textarea class="form-control" name="message" placeholder="What can we help you with?" required></textarea>
+            <textarea class="form-control" name="message" placeholder="Tell us how we can help..." required></textarea>
           </div>
           <button type="submit" class="btn btn-green" style="width:100%;justify-content:center;padding:13px;">Send Message</button>
           <div class="form-success">Message sent! We will reply within 1 business day.</div>

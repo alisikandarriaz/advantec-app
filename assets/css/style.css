@@ -96,6 +96,7 @@ nav.scrolled { box-shadow: var(--shadow); }
 .nav-wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
 .logo { display: flex; align-items: center; gap: 10px; }
 .logo-mark { width: 36px; height: 36px; background: var(--green); border-radius: 9px; display: flex; align-items: center; justify-content: center; font-family: var(--font-h); font-weight: 900; font-size: 13px; color: #fff; letter-spacing: -.5px; flex-shrink: 0; }
+.logo-img { height: 32px; width: auto; }
 .logo-text { font-family: var(--font-h); font-size: 19px; font-weight: 800; color: var(--text); letter-spacing: -.4px; }
 .nav-links { display: flex; align-items: center; gap: 2px; }
 .nav-links a { font-family: var(--font-h); font-size: 15px; font-weight: 500; color: var(--text-2); padding: 7px 14px; border-radius: 8px; transition: var(--ease); }

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gut Diary — Symptom Diary for Android</title>
+  <meta name="description" content="Gut Diary is a symptom diary for Android. Log bowel movements, symptoms, food, medication, sleep, stress and weight. Everything stays on your phone." />
+  <link rel="canonical" href="https://advantec.app/gut-diary/" />
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/logo.png" />
+  <link rel="apple-touch-icon" href="/assets/images/logo.png" />
+  <meta name="theme-color" content="#679267" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <style>
+    .gd-hero { padding: 80px 0 48px; text-align: center; background: var(--white); border-bottom: 1px solid var(--border); }
+    .gd-hero h1 { margin-bottom: 16px; }
+    .gd-hero .coming-soon { display: inline-block; font-family: var(--font-h); font-size: 13px; font-weight: 700; padding: 5px 14px; border-radius: 6px; background: #FFFAEB; color: #B54708; margin-bottom: 20px; }
+    .gd-screenshots { padding: 64px 0; }
+    .gd-scroll { display: flex; gap: 16px; overflow-x: auto; padding-bottom: 16px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+    .gd-scroll img { width: 260px; flex-shrink: 0; border-radius: 16px; border: 1px solid var(--border); box-shadow: var(--shadow); scroll-snap-align: start; }
+    .gd-caption { text-align: center; font-size: 13px; color: var(--muted); margin-top: 12px; }
+    .gd-section { padding: 64px 0; }
+    .gd-section + .gd-section { border-top: 1px solid var(--border); }
+    .gd-content { max-width: 680px; margin: 0 auto; }
+    .gd-content h2 { margin-bottom: 20px; }
+    .gd-content p { margin-bottom: 14px; }
+    .gd-content ul { padding-left: 20px; list-style: disc; margin-bottom: 14px; display: flex; flex-direction: column; gap: 6px; }
+    .gd-content li { font-size: 15px; line-height: 1.8; color: var(--muted); }
+    .gd-content strong { color: var(--text); }
+    .gd-plans { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px; }
+    .gd-plan { background: var(--white); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 28px; }
+    .gd-plan h3 { margin-bottom: 14px; }
+    .gd-plan ul { padding-left: 18px; list-style: disc; }
+    .gd-plan li { font-size: 14px; line-height: 1.8; color: var(--muted); }
+    @media (max-width: 640px) {
+      .gd-plans { grid-template-columns: 1fr; }
+      .gd-scroll img { width: 220px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <div class="nav-wrap">
+      <a href="/" class="logo"><img src="/assets/images/logo.png" alt="AdvanTec" class="logo-img" /></a>
+      <ul class="nav-links">
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#apps">Apps</a></li>
+        <li><a href="/#reviews">Reviews</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/#about">About</a>
+  <a href="/#apps">Apps</a>
+  <a href="/#reviews">Reviews</a>
+  <a href="/#contact">Contact</a>
+</div>
+
+<section class="gd-hero">
+  <div class="container">
+    <span class="coming-soon">Coming Soon</span>
+    <h1>Gut Diary</h1>
+    <p style="max-width:560px;margin:0 auto;">A symptom diary for Android. Log bowel movements, symptoms, food, medication, sleep, stress and weight. Everything you enter stays on your phone.</p>
+  </div>
+</section>
+
+<section class="gd-screenshots">
+  <div class="container">
+    <div class="section-center" style="margin-bottom:32px;">
+      <span class="section-tag">Screenshots</span>
+      <h2>See How It Works</h2>
+    </div>
+    <div class="gd-scroll">
+      <img src="/assets/images/gut-diary/01-report.jpg" alt="A clinician report showing a symptom diary summary with Bristol chart, symptom table and questions for the consultant" loading="lazy" />
+      <img src="/assets/images/gut-diary/02-bristol.jpg" alt="Log screen showing all seven Bristol stool types to pick from in one tap" loading="lazy" />
+      <img src="/assets/images/gut-diary/03-today.jpg" alt="Today screen showing bowel movement count, symptom count, medication doses, good days, Bristol type, stress and sleep" loading="lazy" />
+      <img src="/assets/images/gut-diary/04-history.jpg" alt="History screen with a colour-coded weekly grid and 30-day symptom severity trends" loading="lazy" />
+      <img src="/assets/images/gut-diary/05-insights.jpg" alt="Insights screen showing bowel frequency by time of day, Bristol distribution and symptom averages" loading="lazy" />
+      <img src="/assets/images/gut-diary/06-widget.jpg" alt="Home screen widget showing today's bowel and symptom counts with quick-log buttons" loading="lazy" />
+      <img src="/assets/images/gut-diary/07-onboarding.jpg" alt="Onboarding screen explaining that entries stay on the device with no account, no cloud sync, no AI and no analytics" loading="lazy" />
+    </div>
+    <p class="gd-caption">Screenshots show sample entries.</p>
+  </div>
+</section>
+
+<section class="gd-section" style="background:var(--white);">
+  <div class="container">
+    <div class="gd-content">
+      <span class="section-tag">What It Records</span>
+      <h2>Your daily diary, on your phone</h2>
+      <p>Gut Diary records what you enter and shows it back to you. It is not a medical device and does not provide medical advice.</p>
+      <ul>
+        <li>Bowel movements with Bristol type, urgency, pain, blood and colour</li>
+        <li>Symptoms and their severity</li>
+        <li>Food entries and tags</li>
+        <li>Medication doses and schedules</li>
+        <li>Sleep, stress and weight (optional)</li>
+        <li>Your own custom fields</li>
+        <li>Photos attached to bowel entries</li>
+        <li>Notes for your appointment</li>
+      </ul>
+      <p>When an entry matches a fixed rule, such as blood, black or tarry stool, or a weight drop when weight tracking is on, the app shows a notice suggesting you contact a doctor. That notice comes from simple fixed rules, not an assessment.</p>
+    </div>
+  </div>
+</section>
+
+<section class="gd-section">
+  <div class="container">
+    <div class="gd-content">
+      <span class="section-tag">Plans</span>
+      <h2>Free and paid</h2>
+      <p>Everything you need to keep a daily diary is free. The paid plan adds more tools for longer-term tracking.</p>
+      <div class="gd-plans">
+        <div class="gd-plan">
+          <h3>Free</h3>
+          <ul>
+            <li>Unlimited logging</li>
+            <li>Fixed notices for flagged entries</li>
+            <li>Today screen and History (last 30 days)</li>
+            <li>Good days count</li>
+            <li>Home screen widgets</li>
+            <li>Local encrypted backup</li>
+            <li>CSV export</li>
+            <li>Delete all data</li>
+          </ul>
+        </div>
+        <div class="gd-plan">
+          <h3>Paid</h3>
+          <ul>
+            <li>Clinician PDF report</li>
+            <li>Insights screen</li>
+            <li>History beyond 30 days</li>
+            <li>Photo attachments</li>
+            <li>More than two custom fields</li>
+          </ul>
+          <p style="margin-top:14px;font-size:14px;">Available as monthly, annual or lifetime. Prices shown by Google Play. Subscriptions renew automatically until cancelled. If a subscription ends, nothing is locked and no data is removed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gd-section" style="background:var(--white);">
+  <div class="container">
+    <div class="gd-content">
+      <span class="section-tag">Privacy</span>
+      <h2>Your entries stay on your phone</h2>
+      <p>Gut Diary has no account, no cloud sync, no AI, no analytics, no advertising and no internet permission. Your entries never leave your device unless you send them yourself.</p>
+      <p>Read the full <a href="/gut-diary/privacy.html" style="color:var(--green-dark);text-decoration:underline;">Privacy Policy</a> and <a href="/gut-diary/terms.html" style="color:var(--green-dark);text-decoration:underline;">Terms of Service</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="gd-section">
+  <div class="container">
+    <div class="gd-content">
+      <span class="section-tag">Contact</span>
+      <h2>Questions?</h2>
+      <p>Email <a href="mailto:info@advantec.app" style="color:var(--green-dark);text-decoration:underline;">info@advantec.app</a> with any questions about Gut Diary.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;">
+      <p>&copy; 2026 Sikandar Ali, trading as AdvanTec. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/gut-diary/privacy.html">Privacy</a>
+        <a href="/gut-diary/terms.html">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

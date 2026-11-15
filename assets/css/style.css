@@ -161,8 +161,7 @@ nav.scrolled { box-shadow: var(--shadow); }
 .portfolio-link { color: #fff; font-family: var(--font-h); font-size: 14px; font-weight: 700; padding: 10px 22px; border: 2px solid rgba(255,255,255,0.6); border-radius: 8px; transition: var(--ease); }
 .portfolio-link:hover { background: rgba(255,255,255,0.15); }
 .portfolio-info { padding: 22px 24px 26px; display: flex; flex-direction: column; flex: 1; }
-.portfolio-info p { flex: 1; }
-.portfolio-btn-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto; }
+.portfolio-btn-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto; padding-top: 18px; }
 .portfolio-badge { display: inline-block; font-size: 11px; font-weight: 700; font-family: var(--font-h); padding: 3px 10px; border-radius: 6px; margin-bottom: 10px; }
 .portfolio-badge.live { background: var(--green-50); color: var(--green-dark); }
 .portfolio-badge.soon { background: #FFFAEB; color: #B54708; }

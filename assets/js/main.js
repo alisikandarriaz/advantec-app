@@ -49,16 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const banner = document.getElementById('cookie-banner');
-  if (banner && !localStorage.getItem('at_consent')) banner.classList.remove('hidden');
-  document.getElementById('cookie-accept')?.addEventListener('click', () => {
-    localStorage.setItem('at_consent', '1');
-    document.getElementById('cookie-banner')?.classList.add('hidden');
-  });
-  document.getElementById('cookie-decline')?.addEventListener('click', () => {
-    localStorage.setItem('at_consent', '0');
-    document.getElementById('cookie-banner')?.classList.add('hidden');
-  });
+  localStorage.removeItem('at_consent');
+  setupCookieConsent();
 
   const btt = document.getElementById('back-to-top');
   if (btt) {
@@ -98,4 +90,57 @@ function setupScrollSpy() {
   };
   window.addEventListener('scroll', update, { passive: true });
   update();
+}
+
+function getConsent() {
+  try {
+    const raw = localStorage.getItem('advantec_consent');
+    return raw ? JSON.parse(raw) : null;
+  } catch { return null; }
+}
+
+function saveConsent(analytics, affiliate) {
+  const obj = { v: 1, analytics: !!analytics, affiliate: !!affiliate, date: new Date().toISOString() };
+  try { localStorage.setItem('advantec_consent', JSON.stringify(obj)); } catch {}
+  applyConsent(obj);
+}
+
+function applyConsent(c) {
+  if (!c) return;
+  document.querySelectorAll('script[data-consent]').forEach(s => {
+    const cat = s.getAttribute('data-consent');
+    if ((cat === 'analytics' && c.analytics) || (cat === 'affiliate' && c.affiliate)) {
+      const live = document.createElement('script');
+      live.src = s.getAttribute('data-src');
+      document.head.appendChild(live);
+    }
+  });
+}
+
+function setupCookieConsent() {
+  const banner = document.getElementById('cookie-banner');
+  if (!banner) return;
+
+  const existing = getConsent();
+  if (existing) { applyConsent(existing); return; }
+
+  banner.classList.remove('hidden');
+
+  document.getElementById('cookie-accept')?.addEventListener('click', () => {
+    saveConsent(true, true);
+    banner.classList.add('hidden');
+  });
+  document.getElementById('cookie-decline')?.addEventListener('click', () => {
+    saveConsent(false, false);
+    banner.classList.add('hidden');
+  });
+
+  document.querySelectorAll('.cookie-settings-link').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      try { localStorage.removeItem('advantec_consent'); } catch {}
+      banner.classList.remove('hidden');
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    });
+  });
 }
